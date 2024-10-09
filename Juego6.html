@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEÑALIZACIÓN</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/b634a522da.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="popup.java">
+    <link rel="shortcut icon" href="IMAGENES/universae.png" />
+</head>
+<body>
+    <!--CABECERA-->
+    <header class="header">
+        <div class="menu container">
+            <a href="index.html"><img src="IMAGENES/HeaderWebUniversae.png" class="logo"></a>
+           
+        </div>
+    </header>
+
+    <!--PANTALLA JUEGO-->
+        <div class="game">
+            <iframe src="https://html-classic.itch.zone/html/8427597/index.html" style="width: 805px;height:650px"></iframe>
+        </div>
+
+<div id="contenedor">
+    
+  <div class="texto"> <!--TEXTO-->
+              <h1>Mantenimiento de los equipos y 
+                  <br> herramientas de extinción de 
+                  <br> incendios forestales</h1>
+                  <br> 
+              <h4>En un campo de prácticas sumido en el desorden y la confusión tienes que 
+                  <br>encontrar y colocar las partes de los EPIs utilizados en la 
+                  <br>extinción de incendios forestales.</h4>
+                  <br>
+              <h4>Grado: Coordinación de emergencias y protección civil.<br>
+                  <br>Asignatura: Gestión de recursos de emergencias y protección civil<br>
+                  <br>Unidad: Planificación y supervisión del mantenimiento de 
+                  <br>equipos, medios técnicos e instalaciones.
+              </h4><br>
+              <h4>Duración aproximada: 10 minutos.</h4><br>
+             <h4>Dificultad: Fácil</h4>
+  </div>
+  <div class="imagen1"> <!--POPUP/CARRUSEL IMAGENES-->
+    <div class="row">
+        <div class="column2">
+          <img src="IMAGENES/Ascensor0.png" onclick="openModal();currentSlide(1)" class="hover-shadow" style="width: 100%;">
+        </div>
+    </div>
+    <div class="row">
+        <div class="column2">
+          <img src="IMAGENES/Ascensor1.png" onclick="openModal();currentSlide(2)" class="hover-shadow"style="width: 100%">
+        </div>
+    </div>
+    <div class="row">
+        <div class="column2">
+          <img src="IMAGENES/Ascensor2.png" onclick="openModal();currentSlide(3)" class="hover-shadow"style="width: 100%">
+        </div>
+    </div>
+    <div class="row">
+        <div class="column2">
+          <img src="IMAGENES/Ascensor3.png" onclick="openModal();currentSlide(4)" class="hover-shadow"style="width: 100%">
+        </div>
+    </div>
+    <div class="row">
+        <div class="column2">
+            <img src="IMAGENES/Ascensor4.png" onclick="openModal();currentSlide(4)" class="hover-shadow"style="width: 100%">
+        </div>
+    </div>
+    <div id="myModal" class="modal">
+      <span class="close cursor" onclick="closeModal()">&times;</span>
+      <div class="modal-content" style="width: 45%;">
+      
+        <div class="mySlides">
+          <div class="numbertext">1 / 5</div>
+          <img src="IMAGENES/Ascensor0.png" style="width:100%">
+        </div>
+      
+        <div class="mySlides">
+          <div class="numbertext">2 / 5</div>
+          <img src="IMAGENES/Ascensor1.png" style="width:100%">
+        </div>
+      
+        <div class="mySlides">
+          <div class="numbertext">3 / 5</div>
+          <img src="IMAGENES/Ascensor2.png" style="width:100%">
+         </div>
+      
+        <div class="mySlides">
+          <div class="numbertext">4 / 5</div>
+          <img src="IMAGENES/Ascensor3.png" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">5 / 5</div>
+          <img src="IMAGENES/Ascensor4.png" style="width:100%">
+        </div>
+      
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      
+        <div class="caption-container">
+          <p id="caption"></p>
+        </div>
+      
+        <div class="column">
+          <img class="demo" src="IMAGENES/Ascensor0.png" onclick="currentSlide(1)" alt="ASCENSOR" style="width: 50%;">
+        </div>
+      
+        <div class="column">
+          <img class="demo" src="IMAGENES/Ascensor1.png" onclick="currentSlide(2)" alt="ASCENSOR" style="width: 50%;">
+        </div>
+      
+        <div class="column">
+          <img class="demo" src="IMAGENES/Ascensor2.png" onclick="currentSlide(3)" alt="ASCENSOR" style="width: 50%;">
+        </div>
+      
+        <div class="column">
+          <img class="demo" src="IMAGENES/Ascensor3.png" onclick="currentSlide(4)" alt="ASCENSOR" style="width: 50%;">
+        </div>
+
+        <div class="column">
+          <img class="demo" src="IMAGENES/Ascensor4.png" onclick="currentSlide(4)" alt="ASCENSOR" style="width: 50%;">
+        </div>
+      </div>
+    
+  
+
+              <!--SCRIPT POPUP/CARRUSEL-->
+              <script>
+                function openModal() {
+                  document.getElementById("myModal").style.display = "block";
+                }
+                
+                function closeModal() {
+                  document.getElementById("myModal").style.display = "none";
+                }
+                
+                var slideIndex = 1;
+                showSlides(slideIndex);
+                
+                function plusSlides(n) {
+                  showSlides(slideIndex += n);
+                }
+            
+                function currentSlide(n) {
+                  showSlides(slideIndex = n);
+                }
+                
+                function showSlides(n) {
+                  var i;
+                  var slides = document.getElementsByClassName("mySlides");
+                  var dots = document.getElementsByClassName("demo");
+                  var captionText = document.getElementById("caption");
+                  if (n > slides.length) {slideIndex = 1}
+                  if (n < 1) {slideIndex = slides.length}
+                  for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                  }
+                  for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                  }
+                  slides[slideIndex-1].style.display = "block";
+                  dots[slideIndex-1].className += " active";
+                  captionText.innerHTML = dots[slideIndex-1].alt;
+                }
+                </script>
+      </div>
+  </div>
+</div>
+
+   <!--PIE DE PAGINA-->    
+   <footer class="footer">
+    <div class="links">                                   <!--TARGET="BLANK" PARA ABRIR ENLACE EN PESTAÑA NUEVA-->
+            <a href="https://www.facebook.com/UNIVERSAE/" target="_blank"><i id="myImg" class="fa-brands fa-facebook" style="font-size:35px"></i>
+                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img01">
+                    <div id="caption"></div>
+                </div>
+        
+        
+            <a href="https://www.instagram.com/_universae/?hl=es" target="_blank"><i id="myImg" class="fa-brands fa-instagram" style="font-size:35px"></i>
+                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img01">
+                    <div id="caption"></div>
+                </div>
+        
+        
+            <a href="https://www.youtube.com/c/UNIVERSAE_FP" target="_blank"><i  id="myImg" class="fa-brands fa-youtube" style="font-size:35px"></i>
+                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img01">
+                    <div id="caption"></div>
+                </div>
+        
+            <a href="https://www.twitch.tv/universae_fp" target="_blank"><i id="myImg" class="fa-brands fa-twitch" style="font-size:35px"></i>
+                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img01">
+                    <div id="caption"></div>
+                </div>
+        
+            <a href="https://www.linkedin.com/school/universae" target="_blank"><i id="myImg" class="fa-brands fa-linkedin" style="font-size:35px"></i>
+                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img01">
+                    <div id="caption"></div>
+                </div>
+        
+            <a href="https://www.tiktok.com/@_universae" target="_blank"><i id="myImg" class="fa-brands fa-tiktok" style="font-size:30px" ></i>
+                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img01">
+                    <div id="caption"></div>
+                </div>
+
+            <a href="https://twitter.com/_Universae" target="_blank"><i id="myImg" class="fa-brands fa-twitter" style="font-size:35px"></i>
+                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img01">
+                    <div id="caption"></div>
+                </div>
+        
+            <a href="https://universae.com" target="_blank"><i id="myImg" class="fa-brands fa-google" style="font-size:35px"></i>
+                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img01">
+                    <div id="caption"></div>
+                </div>
+    </div>           
+</footer>
+</body>
+</html>
